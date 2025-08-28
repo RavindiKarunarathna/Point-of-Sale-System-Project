@@ -1,0 +1,82 @@
+.logo-edit {
+    height: 50px;
+}
+
+.btn-lightgreen {
+    background-color: #68df68;
+    color: #000;
+}
+
+.btn-lightgreen:hover {
+    background-color: #7cfc7c;
+}
+
+.navbar {
+    background-color: #064d1a !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #b3ffcc !important;
+}
+
+.text-lightgreen {
+    color: #18a318;
+}
+
+.footer-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-social {
+    color: white;
+    text-decoration: none;
+}
+
+/* .footer-gap{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.footer-container .row>[class*="col-"] {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.cart-icon {
+    background: #178d17;
+    color: rgb(10, 10, 10);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-icon:hover {
+    background: hsl(120, 70%, 37%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px white;
+}
+
+.cart-count {
+    background: #0f0f0f;
+    color: #68df68;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
