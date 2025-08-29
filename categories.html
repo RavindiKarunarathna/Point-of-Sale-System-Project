@@ -42,8 +42,46 @@
             </div>
         </div>
     </nav>
+    <br>
+    <!------------------------------------------------------- Header ------------------------------------------------------->
+    <header class="py-3 mb-4 border-bottom navbar">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex align-items-center mb-3 mb-lg-0">
+                <h1 class="name-edit mb-0 text-lightgreen">Categories Keells</h1>
+            </div>
+            <div>
+                <img src="assets/imges/k5.jpeg" height="250px" width="300px">
+            </div>
+        </div>
+    </header>
 
-    <br><br>
+    <main>
+        <!-------------------------------------- Cart Page ------------------------------------------------>
+        <div id="homePage" class="page active">
+            <h2 style="text-align: center; color: #18a318; margin-bottom: 1rem;">Welcome to Shopping!</h2><br>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+
+        <!------------------------------------------- ORDER PAGE ---------------------------------------------->
+        <div id="orderPage" class="page">
+            <div class="navigation">
+                <button class="nav-btn" onclick="showHome()">← Back to Shop</button>
+            </div>
+
+            <h2 style="text-align: center; color: #2d3436; margin: 2rem 0;">Your Shopping Cart</h2>
+
+            <div id="cartContainer"></div>
+            <!-- Full Image Modal -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeImageModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
+        </div>
+    </main>
+
+    <br>
+
     <!------------------- Footer ------------------->
     <div class="container footer-container ">
         <footer class="py-5 navbar">
