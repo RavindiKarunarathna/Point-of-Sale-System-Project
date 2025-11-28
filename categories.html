@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperMarket</title>
+    <title>SuperMarket-Categories Page</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,6 @@
 </head>
 
 <body>
-    <!--------------------------------------- Nav Bar -------------------------------------------------------->
     <nav class="navbar navbar-expand-lg" aria-label="Thirteenth navbar example">
         <div class="container-fluid"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
@@ -32,10 +31,13 @@
                     <li class="nav-item"> <a class="nav-link active" href="about.html">About Us</a> </li>
                     <li class="nav-item"> <a class="nav-link active" href="contact.html">Contact Us</a> </li>
                 </ul>
-                <div class="d-lg-flex col-lg-3 justify-content-lg-end gap-2">
+                <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                     <button class="btn btn-lightgreen" onclick="window.location.href='login.html'">Log In</button>
-                    <button class="btn btn-lightgreen" onclick="window.location.href='categories.html'">Go to
-                        Shopping</button>
+                    <div class="gx-2">
+                        <a href="#" class="cart-icon" onclick="showCart()">
+                            🛒 Cart (<span class="cart-count" id="cartCount">0</span>)
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,25 +45,42 @@
     <br>
     <!------------------------------------------------------- Header ------------------------------------------------------->
     <header class="py-3 mb-4 border-bottom navbar">
-        <div class="container d-flex flex-column align-items-center text-center">
-            <h1 class="name-edit mb-2 text-white">Welcome to Keells!</h1>
-            <h4 class="name-edit mb-0 text-white">Get all the products you need in one place.</h4>
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex align-items-center mb-3 mb-lg-0">
+                <h1 class="name-edit mb-0 text-lightgreen">Categories Keells</h1>
+            </div>
+            <div>
+                <img src="assets/imges/k5.jpeg" height="250px" width="300px">
+            </div>
         </div>
     </header>
 
-    <main class="container my-4">
-        <div class="row g-3 text-center">
-            <div class="col-12 col-sm-6 col-md-4">
-                <img src="assets/imges/k-o.jpeg" class="img-fluid rounded shadow" alt="image1" height="140px">
+    <main>
+        <!-------------------------------------- Cart Page ------------------------------------------------>
+        <div id="homePage" class="page active">
+            <h2 style="text-align: center; color: #18a318; margin-bottom: 1rem;">Welcome to Shopping!</h2><br>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+
+        <!------------------------------------------- ORDER PAGE ---------------------------------------------->
+        <div id="orderPage" class="page">
+            <div class="navigation">
+                <button class="nav-btn" onclick="showHome()">← Back to Shop</button>
             </div>
-            <div class="col-12 col-sm-6 col-md-4">
-                <img src="assets/imges/k-o1.jpeg" class="img-fluid rounded shadow" alt="image2" height="140px">
+
+            <h2 style="text-align: center; color: #2d3436; margin: 2rem 0;">Your Shopping Cart</h2>
+
+            <div id="cartContainer"></div>
+            <!-- Full Image Modal -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeImageModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
             </div>
-            <div class="col-12 col-sm-6 col-md-4">
-                <img src="assets/imges/k7.jpeg" class="img-fluid rounded shadow" alt="image3" height="140px">
-            </div>
+
         </div>
     </main>
+
+    <br>
 
     <!------------------- Footer ------------------->
     <div class="container footer-container ">
@@ -161,6 +180,7 @@
         </footer>
     </div>
 
+
     <!-- Animation JS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -168,7 +188,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- User JS -->
-    <script src="/assets/js/app.js"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 

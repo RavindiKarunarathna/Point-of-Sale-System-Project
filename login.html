@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperMarket</title>
+    <title>SuperMarket-Login Page</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,6 @@
 </head>
 
 <body>
-    <!--------------------------------------- Nav Bar -------------------------------------------------------->
     <nav class="navbar navbar-expand-lg" aria-label="Thirteenth navbar example">
         <div class="container-fluid"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
@@ -33,35 +32,31 @@
                     <li class="nav-item"> <a class="nav-link active" href="contact.html">Contact Us</a> </li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end gap-2">
-                    <button class="btn btn-lightgreen" onclick="window.location.href='login.html'">Log In</button>
-                    <button class="btn btn-lightgreen" onclick="window.location.href='categories.html'">Go to
-                        Shopping</button>
+                    <button class="btn btn-lightgreen" onclick="window.location.href='categories.html'">Go to Shopping</button>
                 </div>
             </div>
         </div>
     </nav>
-    <br>
-    <!------------------------------------------------------- Header ------------------------------------------------------->
-    <header class="py-3 mb-4 border-bottom navbar">
-        <div class="container d-flex flex-column align-items-center text-center">
-            <h1 class="name-edit mb-2 text-white">Welcome to Keells!</h1>
-            <h4 class="name-edit mb-0 text-white">Get all the products you need in one place.</h4>
-        </div>
-    </header>
 
-    <main class="container my-4">
-        <div class="row g-3 text-center">
-            <div class="col-12 col-sm-6 col-md-4">
-                <img src="assets/imges/k-o.jpeg" class="img-fluid rounded shadow" alt="image1" height="140px">
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-                <img src="assets/imges/k-o1.jpeg" class="img-fluid rounded shadow" alt="image2" height="140px">
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-                <img src="assets/imges/k7.jpeg" class="img-fluid rounded shadow" alt="image3" height="140px">
-            </div>
-        </div>
+
+    <main class="form-signin w-50 m-auto">
+        <br><br>
+        <form> <img class="mb-4" src="assets/imges/k-logo.png" alt="" width="72" height="30">
+            <h1 class="h3 mb-3 fw-normal text-lightgreen">Please sign in</h1>
+            <div class="form-floating"> <input type="email" class="form-control" id="floatingInput"
+                    placeholder="name@example.com"> <label for="floatingInput">Email address</label> </div>
+            <br>
+            <div class="form-floating"> <input type="password" class="form-control" id="floatingPassword"
+                    placeholder="Password"> <label for="floatingPassword">Password</label> </div>
+            <div class="form-check text-start my-3"> <input class="form-check-input" type="checkbox" value="remember-me"
+                    id="checkDefault"> <label class="form-check-label" for="checkDefault">
+                    Remember me
+                </label> </div> <button class="btn btn-lightgreen w-50 py-2" type="submit">Sign in</button>
+
+        </form>
     </main>
+
+    <br><br>
 
     <!------------------- Footer ------------------->
     <div class="container footer-container ">
